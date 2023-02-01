@@ -9,22 +9,23 @@ This repo contains a simple proof-of-concept of running Streamlit behind an NGIN
 
 ## Usage
 1. Create the htpasswd file for the desired user by running
-´´´
+```
 make create-password username=<your-username>
-´´´
+```
+
 You will be prompted to enter (and re-enter) the desired password.
 
-1. Build the streamlit image:
+2. Build the streamlit image:
 ```
 make build
 ```
 
-2. Start the services:
+3. Start the services:
 ```
 make start
 ```
 
-3. Open a browser and navigate to *localhost/streamlit*. A prompt will appear asking for the username and password. Enter the username/password combo created earlier to access the streamlit instance.
+4. Open a browser and navigate to *localhost/streamlit*. A prompt will appear asking for the username and password. Enter the username/password combo created earlier to access the streamlit instance.
 
 ## Troubleshooting
 NGINX and Streamlit logs can be access by running the following two commands, respectively:
