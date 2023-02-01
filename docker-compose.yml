@@ -1,0 +1,13 @@
+services:
+  nginx:
+   image: nginx
+   depends_on:
+     - streamlit
+   volumes:
+     - ./.htpasswd:/etc/nginx/.htpasswd:ro
+     - ./conf.d:/etc/nginx/conf.d:ro
+   ports:
+     - 80:80
+
+  streamlit:
+    image: streamlit:latest
